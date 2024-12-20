@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <!-- Background -->
+  <rect width="128" height="128" rx="24" fill="#2da44e"/>
+  
+  <!-- PR Symbol -->
+  <path d="M40 32c-4.4 0-8 3.6-8 8v48c0 4.4 3.6 8 8 8s8-3.6 8-8V40c0-4.4-3.6-8-8-8z" fill="white"/>
+  <circle cx="40" cy="88" r="12" fill="white"/>
+  <circle cx="40" cy="40" r="12" fill="white"/>
+  
+  <!-- AI Brain Symbol -->
+  <path d="M88 32c-4.4 0-8 3.6-8 8v48c0 4.4 3.6 8 8 8s8-3.6 8-8V40c0-4.4-3.6-8-8-8z" fill="white"/>
+  <circle cx="88" cy="88" r="12" fill="white"/>
+  <path d="M76 40h24M76 64h24M76 88h24" stroke="white" stroke-width="4"/>
+</svg>

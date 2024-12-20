@@ -1,0 +1,78 @@
+/* Ensure styles are scoped to our container */
+.pr-assistant-container {
+    --eigengrau: #16161d;
+    --text-primary: #e1e1e6;
+    --text-secondary: #a0a0a7;
+    --border-color: #2a2a35;
+    --accent-primary: #6366f1;
+    --accent-secondary: #818cf8;
+    --success-color: #34d399;
+    --warning-color: #fbbf24;
+    --error-color: #f87171;
+    
+    background-color: var(--eigengrau);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin: 1rem 0;
+    color: var(--text-primary);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+.pr-assistant-container .section {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.pr-assistant-container .section:hover {
+    border-color: var(--accent-secondary);
+    transform: translateY(-1px);
+}
+
+.pr-assistant-container [data-action] {
+    background: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 0.9rem;
+}
+
+.pr-assistant-container [data-action]:hover {
+    background: var(--accent-primary);
+    border-color: var(--accent-primary);
+}
+
+.pr-assistant-container .loading-spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid var(--border-color);
+    border-radius: 50%;
+    border-top-color: var(--accent-primary);
+    animation: spin 1s linear infinite;
+    margin: 1rem auto;
+}
+
+.pr-assistant-container .hidden {
+    display: none !important;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg) }
+}
+
+/* Error message styling */
+.pr-assistant-container .error-message {
+    background-color: var(--error-color);
+    color: white;
+    padding: 0.75rem;
+    border-radius: 6px;
+    margin-top: 1rem;
+    animation: slideIn 0.3s ease-out forwards;
+}

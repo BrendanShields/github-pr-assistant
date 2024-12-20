@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <style>
+      body {
+        width: 320px;
+        padding: 16px;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
+          Arial, sans-serif;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+
+      .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 8px;
+      }
+
+      .form-group {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
+
+      label {
+        font-weight: 500;
+        font-size: 14px;
+      }
+
+      select,
+      input {
+        padding: 6px 8px;
+        border: 1px solid #d0d7de;
+        border-radius: 6px;
+        font-size: 14px;
+      }
+
+      .button {
+        padding: 8px 16px;
+        border: 1px solid #d0d7de;
+        border-radius: 6px;
+        background-color: #f6f8fa;
+        cursor: pointer;
+        font-size: 14px;
+      }
+
+      .button-primary {
+        background-color: #2da44e;
+        color: white;
+        border-color: #2da44e;
+      }
+
+      .status {
+        font-size: 14px;
+        padding: 8px;
+        border-radius: 6px;
+        margin-top: 8px;
+      }
+
+      .status-success {
+        background-color: #dafbe1;
+        color: #1a7f37;
+      }
+
+      .status-error {
+        background-color: #ffebe9;
+        color: #cf222e;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h2>GitHub PR Assistant</h2>
+      </div>
+
+      <div class="form-group">
+        <label for="provider">AI Provider</label>
+        <select id="provider">
+          <option value="openai">OpenAI</option>
+          <option value="anthropic">Anthropic</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="apiKey">API Key</label>
+        <input type="password" id="apiKey" placeholder="Enter your API key" />
+      </div>
+
+      <div class="form-group">
+        <label for="model">Model</label>
+        <select id="model">
+          <option value="gpt-4">GPT-4</option>
+          <option value="gpt-3.5-turbo">GPT-3.5 Turbo</option>
+          <option value="claude-3">Claude 3</option>
+        </select>
+      </div>
+
+      <button id="save" class="button button-primary">Save Settings</button>
+      <div id="status" class="status" style="display: none"></div>
+    </div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
